@@ -15,29 +15,27 @@ let computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
             
-        playerSelection += prompt("Enter rock, paper, or scissors")
-        playerSelection.toLowerCase  
+        playerSelection = prompt("Enter rock, paper, or scissors")
+        playerSelection.toLowerCase 
+        let test = playerSelection 
          
   
-      if (playerSelection === "rock" && computerSelection === "scissors") {   
+      if (test === "rock" && computerSelection === "scissors") {   
       return(playerScore++) }
-      else if (playerSelection === "rock" && computerSelection === "rock") {
+      else if (test === "rock" && computerSelection === "rock") {
           ; }
-      else if(playerSelection === "paper" && computerSelection === "rock") {
+      else if(test === "paper" && computerSelection === "rock") {
            return(playerScore++) }
           
-      else if (playerSelection === "paper" && computerSelection === "paper") {
+      else if (test === "paper" && computerSelection === "paper") {
           ; }
           
-      else if (playerSelection === "scissors" && computerSelection === "paper") {
+      else if (test === "scissors" && computerSelection === "paper") {
           return(playerScore++) }
           
-      else if (playerSelection === "scissors" && computerSelection === "scissors") {
+      else if (test === "scissors" && computerSelection === "scissors") {
            ; }
-      else if (playerSelection !== "rock", "paper", "scissors") {  
-      alert("That's not a valid answer bucko")
-        playRound()
-    }
+      
       else    {
       return(computerScore++) }
 
@@ -48,7 +46,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     for(i = 0; i < 5; i++)
     playRound()
-    
+    getComputerChoice()
 }
     
 game()
