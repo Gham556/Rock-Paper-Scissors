@@ -20,7 +20,7 @@ function getComputerChoice(){
 
 function playRound(button) {
           
-
+if (playerScore.textContent < 5 && compScore.textContent < 5) {
       if (button.target.className === 'rock' && getComputerChoice() === "scissors") {   
       console.log("You Win!") 
       playerScore.textContent++;}
@@ -41,7 +41,16 @@ function playRound(button) {
       else    {
       console.log("You Lose!") 
         compScore.textContent++;}
-
+      }
+else {
+    if(playerScore > compScore) {
+        alert("You win", playerScore.textContent, "to", compScore.textContent)
+    }
+    else {
+      
+            alert("You win" + playerScore.textContent + "to" + compScore.textContent)
+    }
+}
   }
 
         
