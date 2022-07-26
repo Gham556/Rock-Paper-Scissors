@@ -44,11 +44,11 @@ if (playerScore.textContent < 5 && compScore.textContent < 5) {
       }
 else {
     if(playerScore > compScore) {
-        alert("You win", playerScore.textContent, "to", compScore.textContent)
+        alert("You win " + playerScore.textContent + " to " + compScore.textContent)
     }
     else {
       
-            alert("You win" + playerScore.textContent + "to" + compScore.textContent)
+            alert("You win " + playerScore.textContent + " to " + compScore.textContent)
     }
 }
   }
