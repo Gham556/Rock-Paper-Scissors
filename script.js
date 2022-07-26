@@ -1,59 +1,44 @@
-let playerScore = 0
-let computerScore = 0
+
+//UI//
+
+const buttons = Array.from(document.getElementsByTagName('button'));
+
+buttons.forEach(button => button.addEventListener('click', playRound));
 
 
+
+// runs games //
 function getComputerChoice(){
     var choices = ["rock", "paper", "scissors"];
     let result = choices[Math.floor(Math.random()*choices.length)];
     return(result);
 }        
 
-let computerSelection = getComputerChoice();
 
 
-
-function playRound() {
-            
-        playerSelection = prompt("Enter rock, paper, or scissors")
-        playerSelection.toLowerCase 
-        
-        
-
-  
-      if (playerSelection === "rock" && computerSelection === "scissors") {   
-      return(playerScore++) }
-      else if (playerSelection === "rock" && computerSelection === "rock") {
-          ; }
-      else if(playerSelection === "paper" && computerSelection === "rock") {
-           return(playerScore++) }
+function playRound(button) {
           
-      else if (playerSelection === "paper" && computerSelection === "paper") {
-          ; }
+
+      if (button.target.className === 'rock' && getComputerChoice() === "scissors") {   
+      console.log("You Win!") }
+      else if (button.target.className === 'rock' && getComputerChoice() === "rock") {
+          console.log("It's A Tie!"); }
+      else if(button.target.className === "paper" && getComputerChoice() === "rock") {
+           console.log("You Win!") }
           
-      else if (playerSelection === "scissors" && computerSelection === "paper") {
-          return(playerScore++) }
+      else if (button.target.className === "paper" && getComputerChoice() === "paper") {
+          console.log("It's A Tie"); }
           
-      else if (playerSelection === "scissors" && computerSelection === "scissors") {
-           ; }
+      else if (button.target.className === "scissors" && getComputerChoice() === "paper") {
+          console.log("You Win!") }
+          
+      else if (button.target.className === "scissors" && getComputerChoice() === "scissors") {
+           console.log("It's A Tie!"); }
       
       else    {
-      return(computerScore++) }
+      console.log("You Lose!") }
 
-    return{playerScore, computerScore}
+   console.log(computerSelection)
   }
 
         
-function game() {
-    for(i = 0; i < 5; i++) {
-        getComputerChoice()
-        computerSelection = getComputerChoice()
-        playRound()
-    ;}
-}
-    
-game()
-   
-console.log("Your score is " + playerScore + " and the computer score is " + computerScore)
-
-
-  
