@@ -7,4 +7,9 @@ My original code had also run the prompt outside of a function, so it took a few
 
 All in all, this project took longer than I planned but was a great debugging excercise. I have a much better understanding of functions and variables, and improved my syntax. The most important lesson I learned was how to use the Chrome Debugger which I have only briefly explored and yet it solved an issue that I had spent a couple hours tracking down. 
 
+//UI//
+
+As a follow up to this project I was tasked with created an on page UI that completed the above functions. I did this by creating three buttons that triggered the playRound function on click. Then, adding a score tracker and an alert that signals who the first to reach 5 is. 
+
+The biggest problem I had was getting the buttons to work, and then after that finding a way to call the button class, so that it could be used as a variabel in the play round function. 
 
